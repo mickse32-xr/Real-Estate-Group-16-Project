@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Island | La Maison</title>
+    <link rel="stylesheet" href="bananaisland.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <div class="navbar">
+            <div class="logo">La <span>Maison</span></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">About Us</a>
+                <a href="properties.html">Properties</a>
+                <a href="#">Agents</a>
+                <a href="properties.html">Find A House</a>
+            </div>
+            <button class="back-btn" onclick="window.location.href='properties.html'">← Back to Properties</button>
+        </div>
+
+        <div class="main-content">
+            <!-- LEFT COLUMN -->
+            <div class="left-column">
+                <div class="main-image">
+                    <img src="banana .jpeg" alt="Banana Island" onerror="this.src='https://placehold.co/600x350?text=Banana+Island'">
+                </div>
+
+                <div class="description-section">
+                    <h2> About Banana Island, Lagos</h2>
+                    <p>Banana Island is an artificial island off the foreshore of Ikoyi, Lagos. It is one of the most expensive and exclusive neighborhoods in Africa, home to billionaires, celebrities, and top business executives.</p>
+                    <p>This magnificent 4-bedroom mansion offers panoramic ocean views, state-of-the-art finishes, and world-class amenities. Built in 2022, this property represents the pinnacle of luxury living in Nigeria.</p>
+                    
+                    <h3> Key Features</h3>
+                    <ul class="features-list">
+                        <li> Private Infinity Pool</li>
+                        <li> 360° Ocean View</li>
+                        <li> 24/7 Armed Security</li>
+                        <li> 4-Car Garage</li>
+                        <li> Fully Equipped Gym</li>
+                        <li> Private Cinema Room</li>
+                        <li> Gourmet Kitchen</li>
+                        <li> Japanese Garden</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="right-column">
+                <div class="price-card">
+                    <div class="price-value">₦480,000,000</div>
+                    <p class="price-sub">(~ $1,050,000 USD)</p>
+
+                    <div class="breakdown">
+                        <h3> Price Breakdown</h3>
+                        <div class="breakdown-row">
+                            <span>Property Price:</span>
+                            <span>₦480,000,000</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span>VAT (7.5%):</span>
+                            <span>₦36,000,000</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span>Stamp Duty (6%):</span>
+                            <span>₦28,800,000</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span>Legal Fees (3%):</span>
+                            <span>₦14,400,000</span>
+                        </div>
+                        <div class="breakdown-row">
+                            <span>Agency Fee (5%):</span>
+                            <span>₦24,000,000</span>
+                        </div>
+                        <div class="breakdown-total">
+                            <span><strong>Total Payable:</strong></span>
+                            <span><strong>₦583,200,000</strong></span>
+                        </div>
+                    </div>
+
+                    <h3> Place Order / Enquiry</h3>
+                    <input type="text" id="fullName" placeholder="Full Name" class="order-input">
+                    <input type="email" id="email" placeholder="Email Address" class="order-input">
+                    <input type="tel" id="phone" placeholder="Phone Number" class="order-input">
+                    <button class="order-btn" onclick="placeOrder()">Submit Enquiry</button>
+
+                    <div class="agent-section">
+                        <h3> Talk to an Agent</h3>
+                        <button class="call-btn" onclick="alert('Calling +234 915 194 0345')">📞 Call Now: +234 915 194 0345</button>
+                        <button class="whatsapp-btn" onclick="alert('WhatsApp chat started!')">💬 WhatsApp Chat</button>
+                    </div>
+
+                    <div class="viewing-section">
+                        <h3> Schedule a Viewing</h3>
+                        <input type="date" id="viewingDate" class="order-input">
+                        <button class="schedule-btn" onclick="scheduleViewing()">Book Viewing</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>La Maison</h3>
+                    <p>Luxury real estate, crafted relationships, <br>No stress No Anxiety. <br>Find your dream home with us.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <p>Properties</p>
+                    <p>Agents</p>
+                    <p>Find a House</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>mickse32@gmail.com</p>
+                    <p>+234 915 194 0345</p>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 La Maison — All rights reserved. Made By NAMIKAZI
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function placeOrder() {
+            const name = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            
+            if (!name || !email || !phone) {
+                alert('Please fill in all required fields!');
+                return;
+            }
+            
+            alert(`Thank you ${name}! An agent will contact you within 24 hours.`);
+        }
+
+        function scheduleViewing() {
+            const date = document.getElementById('viewingDate').value;
+            if (!date) {
+                alert('Please select a date for viewing');
+                return;
+            }
+            alert(`Viewing scheduled for ${date}. An agent will confirm shortly.`);
+        }
+    </script>
+</body>
+</html>

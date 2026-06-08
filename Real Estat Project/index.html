@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>La Maison | Luxury Real Estate</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">La <span>Maison</span></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">About Us</a>
+                <a href="properties.html">Properties</a>
+                <a href="#">Agents</a>
+                <a href="properties.html">Find A House</a>
+            </div>
+            <button class="btn-outline" onclick="window.location.href='properties.html'">Get Started</button>
+        </div>
+
+        <div class="hero">
+            <div class="hero-content">
+                <div class="hero-badge">Find A House</div>
+                <h1>That Suits You</h1>
+                <p>Want to find a home? We are ready to help you find one that suits your lifestyle and needs.</p>
+                <button class="btn-primary" onclick="window.location.href='properties.html'">Get Started →</button>
+                <div class="hero-stats">
+                    <div class="stat"><h3>1200+</h3><p>Listed Properties</p></div>
+                    <div class="stat"><h3>4500+</h3><p>Happy Customers</p></div>
+                    <div class="stat"><h3>100+</h3><p>Awards</p></div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="beautiful.jpeg" alt="luxury home" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+
+        <div class="search-section">
+            <h3 style="margin-bottom: 24px; font-weight: 600;">Search for available properties</h3>
+            <div class="search-form">
+                <div class="search-field">
+                    <label>Location</label>
+                    <input type="text" id="searchLocation" placeholder="Lagos, Banana Island, Parkview..." value="Lagos">
+                </div>
+                <div class="search-field">
+                    <label>Property Type</label>
+                    <select id="searchType">
+                        <option>Residential</option>
+                        <option>Commercial</option>
+                        <option>Luxury Villa</option>
+                        <option>Apartment</option>
+                    </select>
+                </div>
+                <div class="search-field">
+                    <label>Budget</label>
+                    <select id="searchBudget">
+                        <option>₦100M - ₦300M</option>
+                        <option>₦300M - ₦600M</option>
+                        <option>Any</option>
+                    </select>
+                </div>
+                <button class="search-btn" onclick="goToPropertiesWithSearch()">Search Now →</button>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2>POPULAR <span style="font-weight:400">| Our Popular Homes</span></h2>
+            <a href="properties.html" class="explore-link">Explore All →</a>
+        </div>
+
+        <div class="cards-grid">
+            <!-- Parkview Estate Card -->
+            <div class="property-card">
+                <div class="card-img">
+                    <img src="parkvile.jpeg" alt="Parkview Estate Lagos" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="card-details">
+                    <div class="property-location">Parkview Estate, Lagos</div>
+                    <div class="property-meta">
+                        <span>5Bed</span> <span>10x10m</span> <span>1600m²</span>
+                    </div>
+                    <div class="price">₦200,000,000</div>
+                    <button class="book-btn" onclick="window.location.href='properties.html'">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Banana Island Card - FIXED IMAGE PATH -->
+            <div class="property-card">
+                <div class="card-img">
+                    <img src="banana .jpeg" alt="Banana Island Lagos" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="card-details">
+                    <div class="property-location">Banana Island, Lagos</div>
+                    <div class="property-meta">
+                        <span>4Bed</span> <span>10x10m</span> <span>1600m²</span>
+                    </div>
+                    <div class="price">₦100,000,000</div>
+                    <button class="book-btn" onclick="window.location.href='properties.html'">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Hillview Estate Card -->
+            <div class="property-card">
+                <div class="card-img">
+                    <img src="hillview.jpeg" alt="Hillview Estate Maitama Abuja" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="card-details">
+                    <div class="property-location">Hillview Estate Maitama, Abuja</div>
+                    <div class="property-meta">
+                        <span>3Bed</span> <span>10x10m</span> <span>1600m²</span>
+                    </div>
+                    <div class="price">₦500,000,000</div>
+                    <button class="book-btn" onclick="window.location.href='properties.html'">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-text">
+                “Our business is built off of close relationships and we are glad that we are able to share our positive real estate experiences with our clients.”
+            </div>
+            <div class="testimonial-author">Michael</div>
+            <div class="testimonial-title">Founder, La Maison</div>
+        </div>
+
+        <div class="partners">
+            <div class="partner-logo">EQUINIX</div>
+            <div class="partner-logo">DIGITAL REALTY</div>
+            <div class="partner-logo">EQUINIX</div>
+            <div class="partner-logo">DIGITAL REALTY</div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 style="font-size: 24px;">La Maison</h3>
+                    <p>Luxury real estate,<br> crafted relationships, <br> No stress No Anxiety. Find your dream home with us. </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <p>Properties</p>
+                    <p>Agents</p>
+                    <p>Find a House</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>mickse32@gmail.com</p>
+                    <p>+234 915 194 0345</p>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2026 La Maison — premium real estate. All rights reserved.
+                Made By NAMIKAZI
+            </div>
+        </div>
+    </footer>
+
+   
+</body>
+</html>
